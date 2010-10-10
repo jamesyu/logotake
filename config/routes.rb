@@ -5,9 +5,8 @@ ActionController::Routing::Routes.draw do |map|
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
   # Keep in mind you can assign values other than :controller and :action
   
-  map.resources :logos
   map.resources :gaps, :as => 'gap'
-  map.resources :myspace
+  map.resources :myspaces, :as => 'myspace'
   
   map.root :controller => 'gaps', :action => 'new'
 
