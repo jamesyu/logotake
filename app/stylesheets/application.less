@@ -1,1 +1,96 @@
 @import "globals.less";
+
+body {
+    text-align: center;
+}
+
+a {
+    
+}
+
+#header {
+    margin: 55px auto 25px auto;
+    width: 800px;
+    border-bottom: 1px dashed #777;
+    
+    .logo {
+        float: left;
+        margin-right: 40px;
+    }
+    
+    ul {
+        list-style-type: none;
+        
+        li {
+            float: left;
+            margin-right: 15px;
+            font-size: 20px;
+            
+            a {
+                margin-top: 7px;
+                text-decoration: none;
+                display: block;
+                padding: 5px 10px 5px 10px;
+                color: #333;
+                .rounded_corners(5px);
+                
+                :hover {
+                    background: #ddd;
+                }
+            }
+        }
+        
+        li.active {
+            a {
+                background: #3366CC;
+                
+                :hover {
+                    background: #3366CC;
+                }
+            }
+        }
+    }
+}
+
+#page {
+    
+}
+
+#footer {
+    border-top: 1px dashed #777;
+    margin: 55px auto 25px auto;
+    width: 800px;
+       
+    ul {
+        list-style-type: none;
+        
+        li {
+            float: left;
+            margin-right: 15px;
+            font-size: 14px;
+            
+            a {
+                margin-top: 7px;
+                text-decoration: none;
+                display: block;
+                padding: 3px 7px 3px 7px;
+                color: #333;
+                .rounded_corners(5px);
+                
+                :hover {
+                    background: #ddd;
+                }
+            }
+        }
+        
+        li.active {
+            a {
+                background: #3366CC;
+                
+                :hover {
+                    background: #3366CC;
+                }
+            }
+        }
+    }
+}

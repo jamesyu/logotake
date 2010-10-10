@@ -1,0 +1,2 @@
+class Gap < Logo
+end

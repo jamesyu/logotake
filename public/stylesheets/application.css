@@ -8,4 +8,56 @@
 
 
 
-*/
+*/body { text-align: center; }
+#header {
+  margin: 55px auto 25px auto;
+  width: 800px;
+  border-bottom: 1px dashed #777777;
+}
+#header .logo {
+  float: left;
+  margin-right: 40px;
+}
+#header ul { list-style-type: none; }
+#header ul li {
+  float: left;
+  margin-right: 15px;
+  font-size: 20px;
+}
+#header ul li a {
+  margin-top: 7px;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px 5px 10px;
+  color: #333333;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+#header ul li a:hover { background: #dddddd; }
+#header ul li.active a { background: #3366cc; }
+#header ul li.active a:hover { background: #3366cc; }
+#footer {
+  border-top: 1px dashed #777777;
+  margin: 55px auto 25px auto;
+  width: 800px;
+}
+#footer ul { list-style-type: none; }
+#footer ul li {
+  float: left;
+  margin-right: 15px;
+  font-size: 14px;
+}
+#footer ul li a {
+  margin-top: 7px;
+  text-decoration: none;
+  display: block;
+  padding: 3px 7px 3px 7px;
+  color: #333333;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+#footer ul li a:hover { background: #dddddd; }
+#footer ul li.active a { background: #3366cc; }
+#footer ul li.active a:hover { background: #3366cc; }

@@ -1,0 +1,2 @@
+class Myspace < Logo
+end
