@@ -1,4 +1,4 @@
-Gap = {
+LT = {
     initialized: false,
     input_initialized: false,
     
@@ -48,23 +48,9 @@ Gap = {
            }
             
         });
-    },
-    
-    tshirt: function() {
-        /*
-        $('.tshirt').mouseenter(function(e) {
-            $(this).addClass('tshirt_active');
-        });
-        $('.tshirt').mouseleave(function(e) {
-            $(this).removeClass('tshirt_active');
-        });
-        $('.tshirt').click(function(e) {
-            window.location = 'http://www.zazzle.com/crap_gap_tshirt-235033794310959060';
-        });*/
-    }
-    
+    } 
 };
 
 $(function() {
-    Gap.init();
+    LT.init();
 });

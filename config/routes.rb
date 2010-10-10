@@ -5,7 +5,16 @@ ActionController::Routing::Routes.draw do |map|
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
   # Keep in mind you can assign values other than :controller and :action
   
-  map.root :controller => 'home'
+  map.resources :logos
+  map.resources :gaps, :as => 'gap'
+  map.resources :myspace
+  
+  map.root :controller => 'gaps', :action => 'new'
+
+  #map.connect 'gap', :controller => 'logos', :action => 'new', :type => 'Gap'
+  #map.connect 'myspace', :controller => 'logos', :action => 'new', :type => 'Myspace'
+  
+  #map.root :controller => 'logos', :action => 'new', :type => 'Gap'
 
   # Sample of named route:
   #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'

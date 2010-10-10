@@ -8,4 +8,49 @@
 
 
 
-*/
+*/.share {
+  padding: 30px 15px 15px 15px;
+  margin: auto;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  font-size: 17px;
+  text-align: center;
+}
+.share input {
+  width: 300px;
+  font-size: 14px;
+  height: 17px;
+}
+.your_own {
+  margin-top: 15px;
+  font-size: 25px;
+}
+.explain {
+  margin-top: 15px;
+  font-size: 12px;
+  text-align: center;
+}
+.explain img {
+  margin: auto;
+  display: block;
+  margin-bottom: 15px;
+}
+.explain div {
+  font-size: 15px;
+  color: #555555;
+}
+.click_to_edit { padding: 5px 0 10px 0; }
+.click_to_edit_active { background: #eeeeee; }
+.save {
+  margin-top: 15px;
+  background: #49688b;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 10px 5px 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 0;
+  color: #ffffff;
+  cursor: pointer;
+}
+.save:hover { background: #425e80; }
