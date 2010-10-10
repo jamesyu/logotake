@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+
+    <head>
+		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>      
+		<title><%= h(yield(:title) || "Logotake") %></title>
+		<meta name="description" content="Your take on logo designs. Create your own parody logos." />
+        <meta name="keywords" content="logo, designs, take, customize, funny, parody" />
+        
+        <meta property="og:title" content="<%= @logo ? (h @logo.text) : 'Logotake' %>" />
+        <meta property="og:url" content="<%= @logo ? logo_url(@logo) : 'http://www.logotake.com/' %>"/>
+        <meta property="og:description" content="Your take on logo designs. Create your own parody logos." />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Logotake" />
+        <meta property="fb:admins" content="403902" />
+        <meta property="fb:app_id" content="" />
+        
+        
+        <script type="text/javascript">
+            LT = {};
+        </script>
+
+        <%= stylesheet_link_tag :all, :cache => true %>
+        <%= javascript_include_tag :all, :cache => true %>
+
+        <%= yield(:head) %>
+        
+		<% if Rails.env.production? %>	
+		<!--
+            <script type="text/javascript">
+
+              var _gaq = _gaq || [];
+              _gaq.push(['_setAccount', 'UA-18967073-1']);
+              _gaq.push(['_trackPageview']);
+
+              (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+              })();
+
+            </script>
+			<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+			-->
+		<% end %>
+    </head>
+    <body class='<%= "p_#{params[:controller]}_#{params[:action]} p_#{params[:controller]}" %>'>
+        <% if @content_for_header %>
+            <%= yield :header %>
+        <% else %>
+            <%= render :partial => 'layouts/header' %>
+        <% end %>
+
+        <div id="page">
+            <%= yield %>
+        </div>
+        
+        <% if @content_for_footer %>
+            <%= yield :footer %>
+        <% else %>
+            <%= render :partial => 'layouts/footer' %>
+        <% end %>
+
+        
+        <% if @content_for_jsblock %>
+            <script type="text/javascript">
+                <%= yield :jsblock %>
+            </script>
+        <% end %>
+        
+        <% if Rails.env.production? %>
+        <!--
+            <script type="text/javascript">
+            var _sf_async_config={uid:9705,domain:"makeyourowngaplogo.com"};
+            (function(){
+              function loadChartbeat() {
+                window._sf_endpt=(new Date()).getTime();
+                var e = document.createElement('script');
+                e.setAttribute('language', 'javascript');
+                e.setAttribute('type', 'text/javascript');
+                e.setAttribute('src',
+                   (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+                   "static.chartbeat.com/js/chartbeat.js");
+                document.body.appendChild(e);
+              }
+              var oldonload = window.onload;
+              window.onload = (typeof window.onload != 'function') ?
+                 loadChartbeat : function() { oldonload(); loadChartbeat(); };
+            })();
+
+            </script>
+            -->
+        <% end %>
+        
+    </body>
+</html>

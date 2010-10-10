@@ -1,2 +1,70 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+Gap = {
+    initialized: false,
+    input_initialized: false,
+    
+    init: function() {
+        this.gap_text = $('input.gap');
+        this.attachEvents();
+        this.initialized = true;
+        
+        this.browserTweaks();
+        this.tshirt();
+    },
+    
+    attachEvents: function() {
+        var self = this;
+
+        var init = function(e) {
+            if(!self.input_initialized) {
+                $('.click_to_edit').removeClass('click_to_edit_active');
+                self.input_initialized = true;
+                $('.gap').focus();
+                $('.explain').hide();
+                $('.save').fadeIn();
+            }
+        };
+
+        this.gap_text.click(init);
+        $('.click_to_edit').click(init);
+        $('.click_to_edit').mouseenter(function() {
+            $(this).addClass('click_to_edit_active');
+        });
+        $('.click_to_edit').mouseleave(function() {
+            $(this).removeClass('click_to_edit_active');
+        });
+                
+        $('.save').click(function(e) {
+            $(this).closest('form').submit();
+        });
+        
+
+    },
+    
+    browserTweaks: function() {
+        jQuery.each(jQuery.browser, function(i, val) {
+           if(i=="mozilla") {
+               $('.gap_container').css('background-position', '662px 3px');
+               $('.logo .text').css('background-position', 'right 3px');
+           }
+            
+        });
+    },
+    
+    tshirt: function() {
+        /*
+        $('.tshirt').mouseenter(function(e) {
+            $(this).addClass('tshirt_active');
+        });
+        $('.tshirt').mouseleave(function(e) {
+            $(this).removeClass('tshirt_active');
+        });
+        $('.tshirt').click(function(e) {
+            window.location = 'http://www.zazzle.com/crap_gap_tshirt-235033794310959060';
+        });*/
+    }
+    
+};
+
+$(function() {
+    Gap.init();
+});
