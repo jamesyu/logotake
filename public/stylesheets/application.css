@@ -13,12 +13,17 @@
   margin: 55px auto 25px auto;
   width: 800px;
   border-bottom: 1px dashed #777777;
+  padding-bottom: 15px;
 }
 #header .logo {
   float: left;
   margin-right: 40px;
 }
-#header ul { list-style-type: none; }
+#header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 #header ul li {
   float: left;
   margin-right: 15px;
