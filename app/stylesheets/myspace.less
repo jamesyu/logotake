@@ -1,7 +1,7 @@
 .myspace_container {
     background: url(/images/myspace/space.gif) no-repeat;
     background-position: 492px 35px;
-    padding: 0;
+    padding: 0 0 15px 0;
     width: 700px;
     position: relative;
     right: 165px;
@@ -10,6 +10,8 @@
     font-family: Arial;
     
     input {
+        -webkit-transform: rotate(1deg); 
+        -moz-transform: rotate(1deg);	
         margin: 0;
         position: relative;
         right: 195px;
@@ -31,18 +33,31 @@
 .myspace_logo {
     padding: 0;
     margin: auto;
+    width: 800px;
+    position: relative;
 
     .text {
         padding-right: 200px;
-        padding-bottom: 15px;
+        padding-bottom: 20px;
         background-image: url(/images/myspace/space.gif);
         background-repeat: no-repeat;
         background-position: right 45px;
-        display: inline;
+        display: block;
         margin: 0;
         font-size: 66px;
         font-weight: bold;
         font-family: Helvetica;
+        position: relative;
+        height: 100px;
         
+        span {
+            display: block;
+            right: 0px;
+            position: relative;
+            float: right;
+            right: 3px;
+            -webkit-transform: rotate(1deg); 
+            -moz-transform: rotate(1deg);
+        }
     }    
 }

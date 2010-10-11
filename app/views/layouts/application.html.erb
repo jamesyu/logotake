@@ -25,6 +25,9 @@
 
         <%= yield(:head) %>
         
+        <script type="text/javascript" src="http://use.typekit.com/txe8hvh.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        
 		<% if Rails.env.production? %>	
 		<!--
             <script type="text/javascript">

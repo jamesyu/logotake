@@ -14,13 +14,13 @@ LT = {
             if(!self.input_initialized) {
                 $('.click_to_edit').removeClass('click_to_edit_active');
                 self.input_initialized = true;
-                $('.gap').focus();
+                $('.logo_container input').focus();
                 $('.explain').hide();
                 $('.save').fadeIn();
             }
         };
 
-        $('logo_container input').click(init);
+        $('.logo_container input').click(init);
         
         $('.click_to_edit').click(init);
         
@@ -37,11 +37,19 @@ LT = {
         });
     },
     
+    centerMyspace: function(e) {
+        $('.myspace_logo').each(function(i,e) {
+            var outer = $(e).width();
+            var inner = $(e).find('span').width() + 200;
+            $(e).css('right', Math.round((outer - inner) / 2) + 'px');
+        });
+    },
+    
     browserTweaks: function() {
         jQuery.each(jQuery.browser, function(i, val) {
            if(i=="mozilla") {
                $('.gap_container').css('background-position', '662px 3px');
-               $('.logo .text').css('background-position', 'right 3px');
+               $('.gap_logo .text').css('background-position', 'right 3px');
            }
         });
     } 
