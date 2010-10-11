@@ -8,7 +8,11 @@
         <meta name="keywords" content="logo, designs, take, customize, funny, parody" />
         
         <meta property="og:title" content="<%= @logo && !@logo.text.blank? ? (h @logo.text) : 'Logotake' %>" />
-        <meta property="og:url" content="http://www.logotake.com/i" />
+        <% if @content_for_facebook_url %>
+            <%= yield :facebook_url %>
+        <% else %>
+            <meta property="og:url" content="http://www.logotake.com/i" />
+        <% end %>
         <meta property="og:description" content="Your take on logo designs. Create your own parody logos." />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Logotake" />

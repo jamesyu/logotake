@@ -1,4 +1,8 @@
-<% title "#{h @logo.text}" %>
+<% title "#{h @logo.text} - Gap Logo" %>
+
+<% content_for :facebook_url do %>
+    <meta property="og:url" content="<%= gap_url(@logo) %>" />
+<% end %>
 
 <%= render :partial => 'layouts/sub_header' %>
 
