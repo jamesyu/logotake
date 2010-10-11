@@ -9,6 +9,7 @@
 
 
 */body { text-align: center; }
+h1 { font-size: 28px; }
 #header {
   margin: 55px auto 20px auto;
   width: 800px;
@@ -78,6 +79,13 @@
   color: #ffffff;
 }
 #sub_header ul li.active a:hover { background: #3366cc; }
+#page { text-align: center; }
+#page .inner {
+  padding-top: 30px;
+  margin: auto;
+  width: 800px;
+  text-align: left;
+}
 #footer {
   border-top: 1px dashed #777777;
   margin: 55px auto 25px auto;
