@@ -5,8 +5,8 @@ ActionController::Routing::Routes.draw do |map|
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
   # Keep in mind you can assign values other than :controller and :action
   
-  map.resources :gaps, :as => 'gap'
-  map.resources :myspaces, :as => 'myspace'
+  map.resources :gaps, :as => 'gap', :collection => { :random => :get, :top => :get }
+  map.resources :myspaces, :as => 'myspace', :collection => { :random => :get, :top => :get }
   
   map.root :controller => 'gaps', :action => 'new'
 

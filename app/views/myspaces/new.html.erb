@@ -1,0 +1,19 @@
+<%= render :partial => 'layouts/sub_header' %>
+
+<div class="click_to_edit">
+    <% form_for @logo do %>
+        <div class="myspace_container logo_container">
+            <input name="myspace[text]" maxlength="17" type="text" value="my" />
+        </div>
+
+        <div class="explain">
+            <div>click to edit</div>
+        </div>
+
+        <button class="save" style="display: none">Save</button>
+    <% end %>
+</div>
+
+<% jsblock do %>
+    $(function() { LT.initLogoNew() });
+<% end %>
