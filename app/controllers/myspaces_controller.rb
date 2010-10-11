@@ -1,0 +1,2 @@
+class MyspacesController < ApplicationController
+end
