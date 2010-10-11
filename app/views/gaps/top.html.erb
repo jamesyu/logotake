@@ -1,0 +1,9 @@
+<%= render :partial => 'layouts/sub_header' %>
+
+<h1>Top 20 Most Made Logos</h1>
+
+<div class="top">
+    <% @logos.each do |logo| %>
+        <%= render logo %>
+    <% end %>
+</div>

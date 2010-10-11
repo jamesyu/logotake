@@ -1,7 +1,7 @@
 <div id="header" class="clearfix">
     <%= link_to image_tag('logo.png'), root_url, :class => 'logo' %>
     <ul class="clearfix">
-        <li><%= link_to 'Gap' %></li>
-        <li><%= link_to 'MySpace' %></li>
+        <%= top_menu_item 'Gap', new_gap_url, :controller => 'gaps' %>
+        <%= top_menu_item 'MySpace', new_myspace_url, :controller => 'myspaces' %>
     </ul>
 </div>

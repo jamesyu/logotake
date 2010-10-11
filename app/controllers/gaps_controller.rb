@@ -19,6 +19,6 @@ class GapsController < ApplicationController
   def random
     c = Gap.count
     @logo = Gap.first(:offset =>rand(c))
-    redirect_to logo_url(@logo)
+    redirect_to gap_url(@logo)
   end  
 end

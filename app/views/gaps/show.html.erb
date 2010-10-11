@@ -1,6 +1,10 @@
 <% title "#{h @logo.text}" %>
 
-<%= render @logo %>
+<%= render :partial => 'layouts/sub_header' %>
+
+<div class="logo_container">
+    <%= render @logo %>
+</div>
 
 
 <div class="share">

@@ -9,7 +9,7 @@ a {
 }
 
 #header {
-    margin: 55px auto 25px auto;
+    margin: 55px auto 20px auto;
     width: 800px;
     border-bottom: 1px dashed #777;
     padding-bottom: 15px;
@@ -46,6 +46,51 @@ a {
         li.active {
             a {
                 background: #3366CC;
+                color: #fff;
+                
+                :hover {
+                    background: #3366CC;
+                }
+            }
+        }
+    }
+}
+
+#sub_header {
+    margin: 0 auto 25px auto;
+    width: 800px;
+    padding-bottom: 5px;
+    text-align: center;
+    
+    ul {
+        list-style-type: none;
+        margin: 0 auto 0 auto;
+        padding: 0;
+        width: 277px;
+        
+        li {
+            float: left;
+            margin-right: 15px;
+            font-size: 20px;
+            
+            a {
+                margin-top: 7px;
+                text-decoration: none;
+                display: block;
+                padding: 5px 10px 5px 10px;
+                color: #333;
+                .rounded_corners(5px);
+                
+                :hover {
+                    background: #ddd;
+                }
+            }
+        }
+        
+        li.active {
+            a {
+                background: #3366CC;
+                color: #fff;
                 
                 :hover {
                     background: #3366CC;
@@ -89,6 +134,7 @@ a {
         li.active {
             a {
                 background: #3366CC;
+                color: #fff;
                 
                 :hover {
                     background: #3366CC;

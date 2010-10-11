@@ -10,7 +10,7 @@
 
 */body { text-align: center; }
 #header {
-  margin: 55px auto 25px auto;
+  margin: 55px auto 20px auto;
   width: 800px;
   border-bottom: 1px dashed #777777;
   padding-bottom: 15px;
@@ -40,8 +40,44 @@
   border-radius: 5px;
 }
 #header ul li a:hover { background: #dddddd; }
-#header ul li.active a { background: #3366cc; }
+#header ul li.active a {
+  background: #3366cc;
+  color: #ffffff;
+}
 #header ul li.active a:hover { background: #3366cc; }
+#sub_header {
+  margin: 0 auto 25px auto;
+  width: 800px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+#sub_header ul {
+  list-style-type: none;
+  margin: 0 auto 0 auto;
+  padding: 0;
+  width: 277px;
+}
+#sub_header ul li {
+  float: left;
+  margin-right: 15px;
+  font-size: 20px;
+}
+#sub_header ul li a {
+  margin-top: 7px;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px 5px 10px;
+  color: #333333;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+#sub_header ul li a:hover { background: #dddddd; }
+#sub_header ul li.active a {
+  background: #3366cc;
+  color: #ffffff;
+}
+#sub_header ul li.active a:hover { background: #3366cc; }
 #footer {
   border-top: 1px dashed #777777;
   margin: 55px auto 25px auto;
@@ -64,5 +100,8 @@
   border-radius: 5px;
 }
 #footer ul li a:hover { background: #dddddd; }
-#footer ul li.active a { background: #3366cc; }
+#footer ul li.active a {
+  background: #3366cc;
+  color: #ffffff;
+}
 #footer ul li.active a:hover { background: #3366cc; }
