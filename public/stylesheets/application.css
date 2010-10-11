@@ -91,6 +91,11 @@ h1 { font-size: 28px; }
   margin: 55px auto 25px auto;
   width: 800px;
 }
+#footer .share {
+  margin-top: 10px;
+  float: right;
+}
+#footer .twitter-share-button { margin-top: 12px; }
 #footer ul { list-style-type: none; }
 #footer ul li {
   float: left;

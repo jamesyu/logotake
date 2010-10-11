@@ -8,20 +8,7 @@
 
 
 
-*/.share {
-  padding: 30px 15px 15px 15px;
-  margin: auto;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  font-size: 17px;
-  text-align: center;
-}
-.share input {
-  width: 300px;
-  font-size: 14px;
-  height: 17px;
-}
-.your_own {
+*/.your_own {
   margin-top: 15px;
   font-size: 25px;
 }
