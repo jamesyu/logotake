@@ -5,6 +5,8 @@ class CreateLogos < ActiveRecord::Migration
       t.string :type, :null => false
       t.timestamps
     end
+    
+    add_index :logos, :type
   end
 
   def self.down
