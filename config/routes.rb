@@ -9,6 +9,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :myspaces, :as => 'myspace', :collection => { :random => :get, :top => :get }
   
   map.root :controller => 'myspaces', :action => 'new'
+  
+  map.connect 'i', :controller => 'myspaces', :action => 'new'
 
   #map.connect 'gap', :controller => 'logos', :action => 'new', :type => 'Gap'
   #map.connect 'myspace', :controller => 'logos', :action => 'new', :type => 'Myspace'
